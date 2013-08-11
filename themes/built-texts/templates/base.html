@@ -23,21 +23,22 @@
 <header class="blog-header">
   <div class="container">
     <div class="row-fluid">
-      <div class="span9">
+      <div class="span8">
 	<a href="{{ SITEURL }}" class="brand">{{SITENAME}}</a>
       </div>
 
-      <div class="span3" id="blog-nav">
+      <div class="span4" id="blog-nav">
 	<ul class="nav nav-pills pull-right">
 	  {% if DISPLAY_PAGES_ON_MENU %}
           {% for page in PAGES %}
             <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
             {% endfor %}
-            {% endif %}
-	   {% for cat, null in categories %}
-	    <li {% if cat == category %} class="active" {% endif %}>
-	      <a href="{{ SITEURL }}/{{ cat.url }} ">{{ cat }}</a>
-	   {% endfor %}
+      {% endif %}
+      <li> <a href="{{ SITEURL }}/pages/start-here.html ">Start Here</a>
+	  {% for cat, null in categories %}
+	   <li {% if cat == category %} class="active" {% endif %}>
+	     <a href="{{ SITEURL }}/{{ cat.url }} ">{{ cat }}</a>
+	  {% endfor %}
 	</ul>
       </div>
     </div> <!-- End of fluid row-->
@@ -99,24 +100,14 @@
             </li>
             <li><a href="{{ SITEURL }}"><i class="icon-home" style="color: #1f334b">
                 </i>Home</a></li>
-            <li><a href="{{ SITEURL }}/archives.html"><i class="icon-list" style="color: #1f334b">
-                </i>Archives</a></li>
-            <li><a href="{{ SITEURL }}/tags.html"><i class="icon-tags" style="color: #1f334b">
-                </i>Tags</a></li>
             <li><a href="{{ SITEURL }}/pages/about.html"><i class="icon-question-sign" style="color: #1f334b">
                 </i>About</a></li>
-	    
-	    {% if FEED_RSS %}
-	    <li> <a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">
-                <i class="icon-rss" style="color: #1f334b"></i>
-                RSS Feed</a></li>
-	    {% endif %}
-            <li><a href="{{ SITEURL }}/{{ FEED }}" rel="alternate">
-                <i class="icon-rss-sign" style="color: #1f334b"></i>
-                Atom Feed</a></li>
-	  </ul>
-
-        </div>
+            <li><a href="{{ SITEURL }}/tags.html"><i class="icon-tags" style="color: #1f334b">
+                </i>Tags</a></li>
+            <li><a href="{{ SITEURL }}/archives.html"><i class="icon-list" style="color: #1f334b">
+                </i>Archives</a></li>
+          </ul>
+    </div>
 
       </div> <!--end of fluid row-->
     </div> <!--end of blog-footer-->
