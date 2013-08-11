@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Louie Dinh'
-SITENAME = u'homeless-bits'
-SITEURL = ''
+SITENAME = u'homeless bits'
+SITEURL = 'http://localhost:8000'
 
 TIMEZONE = 'Europe/Paris'
 
@@ -20,9 +20,9 @@ LINKS =  (('Pelican', 'http://getpelican.com/'),
           ('Python.org', 'http://python.org/'),)
 
 # Social widget
-SOCIAL = (('Twitter', 'http://twitter.com/louiedinh'),
-        ('LinkedIn', 'http://www.linkedin.com/profile/view?id=103017614'),
-        ('Quora', 'http://www.quora.com/Louie-Dinh'),)
+SOCIAL = (('twitter', 'http://twitter.com/louiedinh'),
+        ('linkedin', 'http://www.linkedin.com/profile/view?id=103017614'),
+        ('quora', 'http://www.quora.com/Louie-Dinh'),)
 
 DEFAULT_PAGINATION = False
 
