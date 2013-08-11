@@ -34,11 +34,11 @@
 <header class="blog-header">
   <div class="container">
     <div class="row-fluid">
-      <div class="span7">
+      <div class="span6">
 	<a href="{{ SITEURL }}" class="brand">{{SITENAME}}</a>
       </div>
 
-      <div class="span5" id="blog-nav">
+      <div class="span6" id="blog-nav">
 	<ul class="nav nav-pills pull-right">
 	  {% if DISPLAY_PAGES_ON_MENU %}
           {% for page in PAGES %}
@@ -47,6 +47,7 @@
       {% endif %}
       <li> <a href="http://eepurl.com/C88q1">Subscribe</a>
       <li> <a href="{{ SITEURL }}/pages/start-here.html ">Start Here</a>
+      <li> <a href="{{ SITEURL }}/pages/toc.html ">TOC</a>
 	  {% for cat, null in categories %}
 	   <li {% if cat == category %} class="active" {% endif %}>
 	     <a href="{{ SITEURL }}/{{ cat.url }} ">{{ cat }}</a>
